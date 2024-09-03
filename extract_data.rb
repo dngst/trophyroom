@@ -1,3 +1,4 @@
+require 'csv'
 require 'musicbrainz'
 
 MusicBrainz.configure do |c|
@@ -7,7 +8,6 @@ MusicBrainz.configure do |c|
   c.contact = "eddieatsenga@protonmail.com"
 end
 
-
 def find_album_mbid(artist, album_name)
   results = MusicBrainz::ReleaseGroup.search(artist, album_name, 'Album')
   release_group = results.first
@@ -15,11 +15,15 @@ def find_album_mbid(artist, album_name)
   if release_group
     "MBID for album '#{album_name}': #{release_group[:id]}"
   else
-    nil
+    "No MBID found for album '#{album_name}' by #{artist}"
   end
 end
 
-artist = 'Aretha Franklin'
-album_name = 'I Never Loved a Man the Way I Love You'
+csv_file_path = 'albums.csv'
 
-puts find_album_mbid(artist, album_name)
+CSV.foreach(csv_file_path, headers: true) do |row|
+  artist = row['Artist']
+  album_name = row['Album']
+  puts find_album_mbid(artist, album_name)
+end
+
