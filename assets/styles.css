@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+#album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Trophy Room</title>
+        <meta name="description" content="Album covers">
+        <link rel="stylesheet" href="assets/styles.css">
+        <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+    </head>
+    <body>
+        <div id="album-grid"
+             hx-get="data/album_covers.json"
+             hx-trigger="load"
+             hx-swap="innerHTML">
+            Loading...
+        </div>
+        <script src="assets/scripts.js"></script>
+    </body>
+</html>
+
