@@ -2,11 +2,11 @@
 
 > WIP
 
-# Install
+## Install
 
 $ bundle
 
-# Usage
+## Usage
 
 $ ruby extract_data.rb
 
