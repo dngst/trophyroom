@@ -1,50 +1,48 @@
 require 'csv'
 require 'json'
-require 'musicbrainz'
 require 'httparty'
-
-MusicBrainz.configure do |c|
-  # Application identity (required)
-  c.app_name = "trophyroom"
-  c.app_version = "1.0"
-  c.contact = "eddieatsenga@protonmail.com"
-end
+require 'ruby-progressbar'
 
 def find_album_mbid(artist, album_name)
-  results = MusicBrainz::ReleaseGroup.search(artist, album_name, 'Album')
-  release_group = results.first
+  url = "https://musicbrainz.org/ws/2/release-group/?query=artist:#{URI.encode_www_form_component(artist)}%20AND%20release:#{URI.encode_www_form_component(album_name)}&fmt=json"
+  response = HTTParty.get(url, headers: { 'User-Agent' => 'trophyroom/1.0 (eddieatsenga@protonmail.com)' })
 
-  if release_group
-    release_group[:id]
-  end
+  response.code == 200 && response['release-groups'] && !response['release-groups'].empty? && response['release-groups'].first['id']
 end
 
 def get_cover_art(mbid)
   response = HTTParty.get("https://coverartarchive.org/release-group/#{mbid}")
-  response.parsed_response['images'].first['image'] if response.parsed_response['images']
+  response.parsed_response['images'] && response.parsed_response['images'].first['image']
 end
 
 csv_file_path = 'albums.csv'
-album_data = []
+json_file_path = 'album_covers.json'
+
+album_data = File.exist?(json_file_path) ? JSON.parse(File.read(json_file_path)) : []
+
+no_of_albums = CSV.foreach(csv_file_path, headers: true).count
+progressbar = ProgressBar.create(title: "Processing albums", total: no_of_albums)
 
 CSV.foreach(csv_file_path, headers: true) do |row|
   artist = row['Artist']
   album_name = row['Album']
-  mbid = find_album_mbid(artist, album_name)
-  cover_art_url = get_cover_art(mbid)
 
-  if cover_art_url
-    album_data << {
+  existing_album = album_data.find { |a| a['artist'] == artist && a['album'] == album_name }
+  unless existing_album
+    mbid = find_album_mbid(artist, album_name)
+    cover_art_url = get_cover_art(mbid)
+
+    cover_art_url && album_data << {
       "artist" => artist,
       "album" => album_name,
       "image" => cover_art_url
     }
   end
+
+  progressbar.increment
 end
 
-File.open("album_covers.json", "w") do |file|
+File.open(json_file_path, "w") do |file|
   file.write(JSON.pretty_generate(album_data))
 end
-
-puts "Done."
 
