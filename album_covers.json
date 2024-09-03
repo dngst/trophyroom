@@ -1,0 +1,52 @@
+[
+  {
+    "artist": "Radiohead",
+    "album": "OK Computer",
+    "image": "http://coverartarchive.org/release/4b3d18cc-8937-36f4-8de0-481088be58e6/17486835783.jpg"
+  },
+  {
+    "artist": "Beyoncé",
+    "album": "Lemonade",
+    "image": "http://coverartarchive.org/release/5b3de0e4-cf86-43c4-b025-80288d6f7466/35751742692.jpg"
+  },
+  {
+    "artist": "Michael Jackson",
+    "album": "Thriller",
+    "image": "http://coverartarchive.org/release/e1b94ba6-c63c-4c2d-8928-9d1a525b7000/22018478497.jpg"
+  },
+  {
+    "artist": "David Bowie",
+    "album": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+    "image": "http://coverartarchive.org/release/bb7f0f5a-586e-3f90-8665-fdc547aa2a54/1239299887.jpg"
+  },
+  {
+    "artist": "Fleetwood Mac",
+    "album": "Rumours",
+    "image": "http://coverartarchive.org/release/7699b503-6a69-4920-91ac-8ee8aa1c1622/7946930592.jpg"
+  },
+  {
+    "artist": "Bob Dylan",
+    "album": "Highway 61 Revisited",
+    "image": "http://coverartarchive.org/release/d61a2bd9-81ac-4023-bd22-1c884d4a176c/13700705404.jpg"
+  },
+  {
+    "artist": "Prince",
+    "album": "Purple Rain",
+    "image": "http://coverartarchive.org/release/1e24029c-3449-457c-9e83-7a91991a847f/31109288691.jpg"
+  },
+  {
+    "artist": "Amy Winehouse",
+    "album": "Back to Black",
+    "image": "http://coverartarchive.org/release/ccf4da26-ea82-462f-b753-88bb976fd40e/36926439244.jpg"
+  },
+  {
+    "artist": "Madonna",
+    "album": "Like a Prayer",
+    "image": "http://coverartarchive.org/release/1d0b790a-ff42-3a40-afef-d439f279412e/3748806166.jpg"
+  },
+  {
+    "artist": "The Rolling Stones",
+    "album": "Exile on Main St.",
+    "image": "http://coverartarchive.org/release/d561e006-3d45-45ea-b34f-1a2a06e5cb0d/11291576233.jpg"
+  }
+]
