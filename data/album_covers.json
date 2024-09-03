@@ -48,5 +48,95 @@
     "artist": "The Rolling Stones",
     "album": "Exile on Main St.",
     "image": "http://coverartarchive.org/release/d561e006-3d45-45ea-b34f-1a2a06e5cb0d/11291576233.jpg"
+  },
+  {
+    "artist": "Travis Scott",
+    "album": "Rodeo",
+    "image": "http://coverartarchive.org/release/114356f9-333f-45f3-898d-00106f3aee45/27189365965.jpg"
+  },
+  {
+    "artist": "Aretha Franklin",
+    "album": "Young",
+    "image": "http://coverartarchive.org/release/b95151ff-e3e8-4eff-8708-079e782d3498/15043463152.jpg"
+  },
+  {
+    "artist": "The Beatles",
+    "album": "Abbey Road",
+    "image": "https://coverartarchive.org/release/31765b9f-e969-4257-855f-c7ea1f657b2a/39706767821.jpg"
+  },
+  {
+    "artist": "Pink Floyd",
+    "album": "The Dark Side of the Moon",
+    "image": "http://coverartarchive.org/release/956fbc58-362d-43b8-b880-3779e0508559/34025419985.jpg"
+  },
+  {
+    "artist": "Nas",
+    "album": "Illmatic",
+    "image": "http://coverartarchive.org/release/f00af81c-9249-49d0-b3f5-8b6725bd1900/28008351580.jpg"
+  },
+  {
+    "artist": "Kendrick Lamar",
+    "album": "DAMN",
+    "image": "http://coverartarchive.org/release/81ad6e82-8e70-4805-8866-42e246c6f68c/16474040990.jpg"
+  },
+  {
+    "artist": "A Tribe Called Quest",
+    "album": "The Low End Theory",
+    "image": "http://coverartarchive.org/release/69959f4a-29fd-4867-83ec-bfb4036b30d1/1672879787.jpg"
+  },
+  {
+    "artist": "Vince Staples",
+    "album": "Big Fish Theory",
+    "image": "http://coverartarchive.org/release/3b7d1d1f-27f5-4a85-9635-edd678c2a576/28538535966.jpg"
+  },
+  {
+    "artist": "Calvin Harris",
+    "album": "Motion",
+    "image": "http://coverartarchive.org/release/aaa0a2b0-e48f-42af-8cd2-7e6b09d2240c/23658732564.jpg"
+  },
+  {
+    "artist": "Years and Years",
+    "album": "Communion",
+    "image": "http://coverartarchive.org/release/8992393d-063d-4c0c-bbd2-61f3afdd8986/11138976088.jpg"
+  },
+  {
+    "artist": "Big Sean",
+    "album": "Dark Sky Paradise",
+    "image": "http://coverartarchive.org/release/ad8af3cb-1f68-4882-9cfd-21f0053d21f2/11244013925.jpg"
+  },
+  {
+    "artist": "Alex Wiley",
+    "album": "Tangerine Dream",
+    "image": "http://coverartarchive.org/release/8bd37038-93d0-4bbc-9196-91aa8632deb1/13899217703.jpg"
+  },
+  {
+    "artist": "Dreezy",
+    "album": "HITGIRL",
+    "image": "http://coverartarchive.org/release/ea2ca192-64ed-4364-9799-6da86b937d5a/32557928116.jpg"
+  },
+  {
+    "artist": "Alesso",
+    "album": "Forever",
+    "image": "http://coverartarchive.org/release/91b6f5aa-57ba-41ee-beb1-8736ac7fd643/13763392525.jpg"
+  },
+  {
+    "artist": "Whitney Houston",
+    "album": "Whitney Houston",
+    "image": "http://coverartarchive.org/release/3811a110-cce0-4ddd-b52f-e12c50190783/1647997357.jpg"
+  },
+  {
+    "artist": "TLC",
+    "album": "CrazySexyCool",
+    "image": "http://coverartarchive.org/release/821cfaab-a24e-4274-80d5-4b7eb96734f0/1925883052.jpg"
+  },
+  {
+    "artist": "The Jacksons",
+    "album": "Triumph",
+    "image": "http://coverartarchive.org/release/e84e4f74-4224-4b30-94b1-af9b401fe6f0/15740405914.jpg"
+  },
+  {
+    "artist": "Earth, Wind and Fire",
+    "album": "I Am",
+    "image": "http://coverartarchive.org/release/f847cfef-3b07-4903-ab57-1a592b7d7b4c/9467398666.jpg"
   }
 ]
