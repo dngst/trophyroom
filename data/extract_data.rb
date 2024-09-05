@@ -4,15 +4,14 @@ require 'httparty'
 require 'ruby-progressbar'
 
 def find_album_mbid(artist, album_name)
-  url = "https://musicbrainz.org/ws/2/release-group/?query=artist:#{URI.encode_www_form_component(artist)}%20AND%20release:#{URI.encode_www_form_component(album_name)}&fmt=json"
+  url = "https://musicbrainz.org/ws/2/release?query=artist:#{URI.encode_www_form_component(artist)}%20AND%20release:#{URI.encode_www_form_component(album_name)}&fmt=json"
   response = HTTParty.get(url, headers: { 'User-Agent' => 'trophyroom/1.0 (eddieatsenga@protonmail.com)' })
-
-  response['release-groups'].first['id']
+  response['releases'].first['id']
 end
 
 def get_cover_art(mbid)
-  response = HTTParty.get("https://coverartarchive.org/release-group/#{mbid}")
-  response.parsed_response['images'] && response.parsed_response['images'].first['image']
+  response = HTTParty.get("https://coverartarchive.org/release/#{mbid}")
+  response.parsed_response['images'].first['image']
 end
 
 csv_file_path = 'albums.csv'
