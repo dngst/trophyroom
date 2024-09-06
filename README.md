@@ -1,6 +1,6 @@
 # Trophy Room
 
-> Album covers
+> Cover art
 
 ## Install
 
