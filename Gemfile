@@ -2,6 +2,6 @@
 
 source "https://rubygems.org"
 
-gem 'httparty'
-gem 'progress_bar'
-
+gem "httparty"
+gem "progress_bar"
+gem "standard"
