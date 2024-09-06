@@ -1,3 +1,7 @@
+:root {
+    scrollbar-width: thin;
+}
+
 body {
     font-family: sans-serif;
     margin: 1rem;
