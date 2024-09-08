@@ -8,6 +8,7 @@ document.body.addEventListener('htmx:afterSwap', function(event) {
             const img = document.createElement('img');
             img.src = album.image;
             img.alt = `${album.album} by ${album.artist}`;
+            img.title = `${album.artist} - ${album.album}`;
             container.appendChild(img);
         });
     } else {
