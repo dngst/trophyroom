@@ -11,7 +11,9 @@ end
 
 def get_cover_art(mbid)
   response = HTTParty.get("https://coverartarchive.org/release/#{mbid}")
-  response.parsed_response["images"].first["image"]
+  images = response.parsed_response["images"]
+  return nil unless images && images.any?
+  images.first["image"]
 end
 
 csv_file_path = "albums.csv"
